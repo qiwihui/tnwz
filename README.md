@@ -12,6 +12,8 @@ Pyhton版本的头脑王者抓题目，暂时不支持排位自动答题。
 
 ## 安装和使用
 
+1. 先获取题库
+
 macOS
 
 ```sh
@@ -30,4 +32,13 @@ pip install -r requirements.txt
 
 # 模拟开房对战
 python3 tnwz.py
+```
+
+2. 答题
+
+```sh
+pip3 install mitmproxy
+mitmweb -s tnwz_hack.py --web-iface 0.0.0.0 --port 8001
+
+# 手机连上安装证书即可
 ```
