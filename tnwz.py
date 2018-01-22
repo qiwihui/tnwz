@@ -32,7 +32,8 @@ class Tnwz(object):
         self.room_id = -1
         self.quiz_bank = quiz_bank
 
-    def create_sign(self, params):
+    @staticmethod
+    def create_sign(params):
         """签名"""
         params = sorted(params.items())
         src = ''.join(['{}={}'.format(key, value)
@@ -277,7 +278,8 @@ class QuizBank():
             # find index
             if target["answer_str"] in quiz['options']:
                 print("Found an existed quiz: {}".format(quiz['quiz']))
-                answer = quiz["options"].index(target["answer_str"])
+                print(target["answer_str"])
+                answer = quiz["options"].index(target["answer_str"]) + 1
                 found = True
         return answer, found
 
