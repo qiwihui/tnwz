@@ -308,10 +308,15 @@ if __name__ == '__main__':
         "token": ""
     }]
     quiz_bank = QuizBank()
+    open_id = ""
     user_1 = Tnwz(
         uid=users[0]["uid"],
         token=users[0]["token"],
-        quiz_bank=quiz_bank)
-    user_2 = Tnwz(uid=users[1]["uid"], token=users[1]["token"])
+        quiz_bank=quiz_bank,
+        open_id=open_id)
+    user_2 = Tnwz(
+        uid=users[1]["uid"],
+        token=users[1]["token"],
+        open_id=open_id)
     while True:
         user_1.battle_with_friend(friend=user_2, period=0)
